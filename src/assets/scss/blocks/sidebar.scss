@@ -1,0 +1,29 @@
+.sidebar_nav {
+    ul {
+        width: 150px;
+        list-style: none;
+        li {
+            width: 100%;
+            cursor: pointer;
+            padding: 6px 8px;
+            &:hover {
+                background-color: $dark;
+
+                > a {
+                    color: $white;
+                }
+            }
+        }
+        a {
+            width: 100%;
+            display: flex;
+
+            font-size: 1.25rem;
+            text-decoration: none;
+
+            color: $light;
+            transition: color 0.2s linear;
+        }
+    }
+    padding-top: 2rem;
+}

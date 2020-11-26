@@ -1,0 +1,24 @@
+@import "vars";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    overflow-x: hidden;
+
+    background-color: $primary;
+    font-size: 14px;
+    color: white;
+}
+
+@import "blocks/container";
+@import "blocks/header";
+@import "blocks/profile-page";
+@import "blocks/sidebar";
