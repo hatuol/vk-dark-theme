@@ -75,6 +75,7 @@ header {
         width: 24px;
         height: 24px;
         display: flex;
+        justify-content: center;
         align-items: center;
 
         border: none;
@@ -109,5 +110,12 @@ header {
         width: 28px;
         height: 28px;
         border-radius: 50%;
+    }
+    &:after{
+        content: "\02EC";
+        line-height: 1;
+        padding-left: 1rem;
+        padding-bottom: 12px;
+        font-size: 2rem;
     }
 }

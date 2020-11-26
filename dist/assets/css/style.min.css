@@ -81,6 +81,7 @@ header {
     width: 24px;
     height: 24px;
     display: flex;
+    justify-content: center;
     align-items: center;
     border: none;
     background: none;
@@ -109,6 +110,12 @@ header {
     width: 28px;
     height: 28px;
     border-radius: 50%; }
+  .header__profile:after {
+    content: "\02EC";
+    line-height: 1;
+    padding-left: 1rem;
+    padding-bottom: 12px;
+    font-size: 2rem; }
 
 .profile-column {
   width: 230px;
@@ -222,6 +229,84 @@ header {
       border-radius: 50%;
       object-fit: cover; }
 
+.groups__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap; }
+  .groups__list li {
+    list-style: none; }
+  .groups__list a {
+    color: white;
+    text-decoration: none; }
+  .groups__list p:hover {
+    text-decoration: underline; }
+
+.groups__list-item {
+  width: 100%;
+  padding: 6px 0 5px;
+  display: flex;
+  align-items: center;
+  text-align: center; }
+  .groups__list-item .groups__list-item-avatar {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 7px; }
+    .groups__list-item .groups__list-item-avatar img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      border-radius: 50%;
+      object-fit: cover; }
+
+.groups__list-item-link {
+  height: 100%;
+  display: block;
+  padding-left: 1rem;
+  text-align: left; }
+
+.groups__list-item-video {
+  cursor: pointer;
+  max-width: 100%;
+  height: 10rem;
+  position: relative; }
+  .groups__list-item-video .video-cover {
+    width: 6rem;
+    height: 6rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(13, 13, 13, 0.8);
+    border-radius: 50%;
+    transform: translate(-50%, -50%); }
+    .groups__list-item-video .video-cover img {
+      width: 3rem;
+      height: 3rem;
+      object-fit: containt;
+      filter: invert(1); }
+  .groups__list-item-video .video-time {
+    padding: 0.5rem;
+    position: absolute;
+    bottom: 0.6rem;
+    right: 0.6rem;
+    border-radius: 4px;
+    background-color: #141414; }
+  .groups__list-item-video img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover; }
+
+.video-name {
+  max-width: 100%;
+  padding: 1rem 0;
+  text-align: left;
+  text-overflow: ellipsis;
+  overflow: hidden; }
+
 .profile-block-item__header {
   padding: 0 4px;
   display: flex;
@@ -308,15 +393,18 @@ header {
   display: flex;
   align-items: center; }
 
-.profile-add-post__avatar {
+.profile-post__avatar {
   width: 3rem;
   height: 3rem; }
-  .profile-add-post__avatar img {
+  .profile-post__avatar img {
     display: block;
     width: 100%;
     height: 100%;
     border-radius: 50%;
     object-fit: cover; }
+  .profile-post__avatar--medium {
+    width: 5rem;
+    height: 5rem; }
 
 .profile-add-post__input {
   width: 60%;
@@ -329,6 +417,41 @@ header {
 .add-files {
   display: flex;
   list-style: none; }
+
+.profile-post__author {
+  display: flex;
+  align-items: center; }
+
+.profile-post__author-data {
+  padding-left: 1.5rem;
+  display: flex;
+  flex-direction: column; }
+
+.profile-post__author-name {
+  padding-bottom: 0.25rem;
+  color: #fff;
+  text-decoration: none; }
+
+.profile-post__content {
+  margin: 1rem 0; }
+
+.profile-post-wrap ul {
+  display: flex; }
+  .profile-post-wrap ul li {
+    cursor: pointer;
+    width: 2rem;
+    height: 2rem;
+    list-style: none;
+    margin-right: 2rem; }
+    .profile-post-wrap ul li img {
+      width: 100%;
+      height: 100%;
+      filter: invert(1);
+      opacity: 0.5; }
+
+time {
+  font-size: 1.25rem;
+  color: #888888; }
 
 .sidebar_nav {
   padding-top: 2rem; }
